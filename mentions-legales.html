@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mentions légales - CyberBot</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto+Mono:wght@300;400;500&display=swap"
+            rel="stylesheet">
+        <style>
+            :root {
+                --dark: #0a2540;
+                --darker: #051020;
+                --blue: #00c8ff;
+                --green: #00e4a1;
+                --orange: #ff7700;
+                --glow: 0 0 15px rgba(0, 200, 255, 0.5);
+                --card-bg: rgba(10, 37, 64, 0.7);
+                --border: rgba(0, 200, 255, 0.2);
+            }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Roboto Mono', monospace;
+                background: linear-gradient(to bottom, var(--dark), var(--darker));
+                color: #ffffff;
+                line-height: 1.6;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 40px 20px;
+            }
+            
+            .legal-header {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            
+            .legal-header h1 {
+                font-family: 'Orbitron', sans-serif;
+                color: var(--blue);
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                text-shadow: var(--glow);
+            }
+            
+            .legal-section {
+                background: var(--card-bg);
+                border-radius: 10px;
+                padding: 30px;
+                margin-bottom: 30px;
+                border: 1px solid var(--border);
+            }
+            
+            .legal-section h2 {
+                color: var(--green);
+                font-family: 'Orbitron', sans-serif;
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+            }
+            
+            .legal-section p {
+                margin-bottom: 15px;
+            }
+            
+            .legal-section ul {
+                list-style-position: inside;
+                margin-bottom: 15px;
+            }
+            
+            .legal-section li {
+                margin-bottom: 10px;
+            }
+            
+            .back-button {
+                display: inline-block;
+                padding: 10px 20px;
+                background: var(--blue);
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 30px;
+                transition: all 0.3s ease;
+            }
+            
+            .back-button:hover {
+                background: var(--green);
+                transform: translateY(-2px);
+            }
+            
+            @media (max-width: 768px) {
+                .legal-header h1 {
+                    font-size: 2rem;
+                }
+                
+                .legal-section h2 {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="legal-header">
+                <h1>Mentions Légales</h1>
+                <p>Dernière mise à jour : 2025</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Informations générales</h2>
+                <p>CyberBot est une plateforme d'apprentissage et d'assistance
+                    en cybersécurité développée et gérée par :</p>
+                <ul>
+                    <li>Raison sociale : BotSentinel</li>
+                    <li>Forme juridique : Société à Responsabilité Limitée</li>
+                    <li>Siège social : Rabat, Maroc</li>
+                    <li>Capital social : -- MAD</li>
+                    <li>RCS : -- </li>
+                    <li>Numéro d'identification fiscale : -- </li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Directeur de la publication</h2>
+                <p>Le directeur de la publication est :</p>
+                <ul>
+                    <li>Nom : ABDELFATTAH OUSSAMA</li>
+                    <li>Email : contact@cyberbot.com</li>
+                    <li>Téléphone : +212 696-280916</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Hébergement</h2>
+                <p>Le site est hébergé par :</p>
+                <ul>
+                    <li>Nom de l'hébergeur : -- </li>
+                    <li>Adresse : -- </li>
+                    <li>Téléphone : -- </li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Propriété intellectuelle</h2>
+                <p>Tous les éléments du site CyberBot (textes, images, vidéos,
+                    logos, etc.) sont protégés par les lois relatives à la
+                    propriété intellectuelle. Toute reproduction ou utilisation
+                    non autorisée est strictement interdite.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Protection des données personnelles</h2>
+                <p>CyberBot s'engage à protéger vos données personnelles
+                    conformément à la loi 09-08 relative à la protection des
+                    personnes physiques à l'égard du traitement des données à
+                    caractère personnel.</p>
+                <p>Pour plus d'informations, veuillez consulter notre <a
+                        href="politique-confidentialite.html"
+                        style="color: var(--blue);">Politique de
+                        confidentialité</a>.</p>
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Retour à l'accueil
+            </a>
+        </div>
+    </body>
+</html>

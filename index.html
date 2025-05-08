@@ -272,13 +272,11 @@
             background: rgba(20, 20, 20, 0.8);
             border-radius: 10px;
             width: 100%;
-            max-width: 600px;
             padding: 30px;
             text-align: center;
             border: 1px solid rgba(0, 255, 255, 0.1);
             transition: all 0.3s ease;
             max-width: 800px;
-            width: 100%;
         }
         
         .resource-card:hover {
@@ -312,6 +310,7 @@
             padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
+            max-width: 100%;
         }
         
         .video-container iframe {
@@ -499,7 +498,18 @@
             
             .resources-grid {
                 flex-direction: column;
-                align-items: stretch;
+                align-items: center;
+            }
+            
+            .video-container {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .resource-card {
+                width: 90%;
+                max-width: 500px;
+                padding: 20px;
             }
         }
 
@@ -528,6 +538,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 40px;
+            max-width: 100%;
+            filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+            transition: all 0.3s ease;
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.8));
         }
 
         .nav-links {
@@ -922,7 +949,7 @@
         <!-- Header -->
         <header>
             <div class="logo">
-                CyberBot
+                <img src="logo.png" alt="CyberBot Logo" class="logo-img">
             </div>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -930,6 +957,7 @@
             <nav class="nav-links">
                 <a href="#presentation">Présentation</a>
                 <a href="#features">Fonctionnalités</a>
+                <a href="#resources">Ressources</a>
                 <a href="#testimonials">Témoignages</a>
                 <a href="#contact">Contact</a>
             </nav>

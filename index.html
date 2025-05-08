@@ -1168,10 +1168,11 @@
                         <p>Découvrez CyberBot en action</p>
                         <div class="video-container">
                             <iframe
-                                src="https://www.youtube.com/embed/e2b-9LCr5QY?vq=hd1080&amp;rel=0"
+                                id="video1"
+                                src="https://www.youtube.com/embed/e2b-9LCr5QY?vq=hd1080&amp;rel=0&amp;modestbranding=1&amp;enablejsapi=1"
                                 title="YouTube video player"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                                 allowfullscreen>
                             </iframe>
                         </div>
@@ -1185,10 +1186,11 @@
                         <p>Aperçu des interfaces de CyberBot</p>
                         <div class="video-container">
                             <iframe
-                                src="https://www.youtube.com/embed/cD6tzC1sNHQ?vq=hd1080&amp;rel=0"
+                                id="video2"
+                                src="https://www.youtube.com/embed/cD6tzC1sNHQ?vq=hd1080&amp;rel=0&amp;modestbranding=1&amp;enablejsapi=1"
                                 title="Interfaces CyberBot"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                                 allowfullscreen>
                             </iframe>
                         </div>
@@ -1829,6 +1831,91 @@
                     navLinks.classList.remove('active');
                 });
             });
+        });
+        
+        // Script pour les vidu00e9os YouTube en plein u00e9cran et haute qualitu00e9
+        document.addEventListener('DOMContentLoaded', function() {
+            // Charger l'API YouTube
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            
+            var player1;
+            var player2;
+            
+            // Fonction appelu00e9e quand l'API YouTube est pru00eate
+            window.onYouTubeIframeAPIReady = function() {
+                // Initialiser le premier lecteur
+                player1 = new YT.Player('video1', {
+                    events: {
+                        'onStateChange': onPlayerStateChange1
+                    },
+                    playerVars: {
+                        'playsinline': 0,
+                        'autoplay': 0,
+                        'controls': 1,
+                        'rel': 0,
+                        'fs': 1,
+                        'modestbranding': 1,
+                        'vq': 'hd1080'
+                    }
+                });
+                
+                // Initialiser le second lecteur
+                player2 = new YT.Player('video2', {
+                    events: {
+                        'onStateChange': onPlayerStateChange2
+                    },
+                    playerVars: {
+                        'playsinline': 0,
+                        'autoplay': 0,
+                        'controls': 1,
+                        'rel': 0,
+                        'fs': 1,
+                        'modestbranding': 1,
+                        'vq': 'hd1080'
+                    }
+                });
+            };
+            
+            // Fonction appelu00e9e quand l'u00e9tat du premier lecteur change
+            function onPlayerStateChange1(event) {
+                if (event.data == YT.PlayerState.PLAYING) {
+                    // Mettre en plein u00e9cran quand la vidu00e9o commence u00e0 jouer
+                    var iframe = document.getElementById('video1');
+                    requestFullScreen(iframe);
+                }
+            }
+            
+            // Fonction appelu00e9e quand l'u00e9tat du second lecteur change
+            function onPlayerStateChange2(event) {
+                if (event.data == YT.PlayerState.PLAYING) {
+                    // Mettre en plein u00e9cran quand la vidu00e9o commence u00e0 jouer
+                    var iframe = document.getElementById('video2');
+                    requestFullScreen(iframe);
+                }
+            }
+            
+            // Fonction pour mettre un u00e9lu00e9ment en plein u00e9cran
+            function requestFullScreen(element) {
+                // Mu00e9thode standardisu00e9e
+                if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                } 
+                // Pour Safari sur iOS
+                else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                } 
+                // Pour Firefox
+                else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                } 
+                // Pour Internet Explorer/Edge
+                else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                }
+            }
         });
     </script>
     </body>

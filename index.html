@@ -1074,41 +1074,6 @@
             </div>
         </section>
 
-        <!-- Demo Section -->
-        <!-- <section id="demo" class="demo-section">
-            <div class="container">
-                <h2 class="section-title reveal">Démo visuelle</h2>
-                <p class="reveal">Voici CyberBot en action : immersion,
-                    apprentissage et assistance</p>
-
-                <div class="demo-gallery reveal">
-                    <div class="demo-item">
-                        <img src="/api/placeholder/400/300"
-                            alt="Interaction avec les chatbots">
-                        <div class="demo-caption">
-                            <h4>Interaction IA</h4>
-                        </div>
-                    </div>
-
-                    <div class="demo-item">
-                        <img src="/api/placeholder/400/300"
-                            alt="Dashboard quiz">
-                        <div class="demo-caption">
-                            <h4>Dashboard Apprentissage</h4>
-                        </div>
-                    </div>
-
-                    <div class="demo-item">
-                        <img src="/api/placeholder/400/300"
-                            alt="Documentation ISO">
-                        <div class="demo-caption">
-                            <h4>Documentation ISO 27001</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <!-- Technologies Section -->
         <section id="technologies">
             <div class="container">
@@ -1167,13 +1132,30 @@
                         <p>Découvrez CyberBot en action</p>
                         <div class="video-container">
                             <iframe
-                                src="demo.mp4"
-                                title="CyberBot Demo" frameborder="0"
+                                src="https://www.youtube.com/embed/e2b-9LCr5QY?vq=hd1080&amp;rel=0"
+                                title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                                allowfullscreen>
+                            </iframe>
                         </div>
-                        <!-- <a href="#" class="resource-link">Voir en plein
-                            écran</a> -->
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Interfaces</h3>
+                        <p>Aperçu des interfaces de CyberBot</p>
+                        <div class="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/cD6tzC1sNHQ?vq=hd1080&amp;rel=0"
+                                title="Interfaces CyberBot"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1364,8 +1346,8 @@
                     </div>
 
                     <div class="stat-card">
-                        <div class="stat-number" data-target="12">0</div>
-                        <div class="stat-label">Services intégrés</div>
+                        <div class="stat-number" data-target="120">0</div>
+                        <div class="stat-label">Articles disponibles</div>
                     </div>
                 </div>
             </div>
@@ -1794,6 +1776,23 @@
             // Ici, vous pouvez ajouter la logique d'envoi du formulaire
             alert('Merci pour votre message ! Nous vous contacterons bientôt.');
             this.reset();
+        });
+        
+        // Script pour le menu hamburger mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Fermer le menu quand on clique sur un lien
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
         });
     </script>
     </body>

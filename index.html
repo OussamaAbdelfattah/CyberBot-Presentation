@@ -264,11 +264,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
         }
         
         .resource-card {
             background: rgba(20, 20, 20, 0.8);
             border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
             padding: 30px;
             text-align: center;
             border: 1px solid rgba(0, 255, 255, 0.1);
@@ -489,9 +493,13 @@
             
             .presentation-grid,
             .features-grid,
-            .tech-grid,
-            .resources-grid {
+            .tech-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .resources-grid {
+                flex-direction: column;
+                align-items: stretch;
             }
         }
 
